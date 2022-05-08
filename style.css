@@ -1,0 +1,14 @@
+:root {
+    --green: #27ae60;
+    --black: #444;
+    --light-color: rgb(73, 69, 69);
+    --bg-color: #e6e6e6;
+    --border: .1rem solid rgba(0, 0, 0, .2);
+    --border2: none;
+    --box-shadow: .4rem .4rem 1rem #ccc,
+        -.4rem -.4rem 1rem #fff;
+    --box-shadow2: .4rem .4rem .5rem #ccc,
+        -.4rem -.4rem .5rem #fff;
+    --box-shadow-inset: .4rem .4rem 1rem #ccc inset,
+        -.4rem -.4rem 1rem #fff inset;
+}
