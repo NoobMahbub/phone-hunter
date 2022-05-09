@@ -1,3 +1,4 @@
+/* all root variables */
 :root {
     --green: #27ae60;
     --black: #444;
@@ -11,4 +12,69 @@
         -.4rem -.4rem .5rem #fff;
     --box-shadow-inset: .4rem .4rem 1rem #ccc inset,
         -.4rem -.4rem 1rem #fff inset;
+}
+body{
+    background-color: var(--bg-color);
+}
+
+
+
+/* Social icons color */
+
+nav li{
+    list-style-type:none;
+    box-shadow: var(--box-shadow);
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin: 5px 15px;
+}
+
+nav a{
+    font-size: 30px;
+    color: #444;
+}
+nav li:hover{
+ 
+    box-shadow: var(--box-shadow-inset)
+}
+
+li:nth-child(1):hover .bi-facebook{
+    color: #446beb;
+
+}
+li:nth-child(2):hover .bi-instagram{
+    color: red;
+}
+li:nth-child(3):hover .bi-github{
+color: #000000;
+}
+li:nth-child(4):hover .bi-whatsapp{
+    color:#63d843;
+
+}
+li:nth-child(5):hover .bi-linkedin{
+    color:#1e4de6;
+
+}
+
+/* phoneInput search bar style */
+#phoneInput{
+background-color: var(--bg-color);
+border: 0;
+box-shadow: var(--box-shadow-inset);
+padding: 15px 50px;
+
+border-radius: 10px;
+
+}
+#submit{
+    box-shadow: var(--box-shadow);
+    padding: 10px 10px;
+    border-radius: 5px;
+}
+#submit:hover{
+    box-shadow: var(--box-shadow-inset);
+}
+.bi-search{
+    font-size: 23px;
 }
