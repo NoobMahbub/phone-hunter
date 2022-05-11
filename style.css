@@ -13,68 +13,160 @@
     --box-shadow-inset: .4rem .4rem 1rem #ccc inset,
         -.4rem -.4rem 1rem #fff inset;
 }
-body{
+
+body {
     background-color: var(--bg-color);
 }
 
+.active {
+    --black: #fff;
+    --white: #fff;
+    --light-color: #ddd;
+    --bg-color: #222;
+    --border: .1rem solid rgba(0, 0, 0, .4);
+    --box-shadow: .4rem .4rem 1rem #111,
+        -.4rem -.4rem 1rem #333;
+    --box-shadow-inset: .4rem .4rem 1rem #111 inset,
+        -.4rem -.4rem 1rem #333 inset;
+}
 
+/* Theme Toggler Position */
+#theme-toggler {
+    position: absolute;
+    top: 10px;
+    right: 2rem;
+    /* z-index: 1000; */
+    height: 4rem;
+    width: 4rem;
+    line-height: 4rem;
+    border-radius: 50%;
+    /* font-size: 1rem; */
+    cursor: pointer;
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    color: var(--black);
+    background: var(--bg-color);
+}
 
-/* Social icons color */
+/* Social icons style */
 
-nav li{
-    list-style-type:none;
+nav li {
+    list-style-type: none;
     box-shadow: var(--box-shadow);
     border-top-left-radius: 10px;
     border-bottom-right-radius: 10px;
     margin: 5px 15px;
+    transition: 0.5s;
 }
 
-nav a{
+nav a {
     font-size: 30px;
-    color: #444;
+    
 }
-nav li:hover{
- 
+nav a i{
+    color: var(--black);
+}
+
+nav li:hover {
+
     box-shadow: var(--box-shadow-inset)
 }
 
-li:nth-child(1):hover .bi-facebook{
+.bi-facebook {
     color: #446beb;
 
 }
-li:nth-child(2):hover .bi-instagram{
+
+.bi-instagram {
     color: red;
 }
-li:nth-child(3):hover .bi-github{
-color: #000000;
-}
-li:nth-child(4):hover .bi-whatsapp{
-    color:#63d843;
+
+
+
+ .bi-whatsapp {
+    color: #63d843;
 
 }
-li:nth-child(5):hover .bi-linkedin{
-    color:#1e4de6;
+
+.bi-linkedin {
+    color: #1e4de6;
 
 }
 
 /* phoneInput search bar style */
-#phoneInput{
-background-color: var(--bg-color);
-border: 0;
-box-shadow: var(--box-shadow-inset);
-padding: 15px 50px;
+#phoneInput {
+    background-color: var(--bg-color);
+    border: 0;
+    box-shadow: var(--box-shadow-inset);
+    padding: 15px 50px;
 
-border-radius: 10px;
+    border-radius: 10px;
 
 }
-#submit{
+
+#submit {
+    background: var(--bg-color);
+    color: var(--black);
     box-shadow: var(--box-shadow);
     padding: 10px 10px;
     border-radius: 5px;
 }
-#submit:hover{
+
+#submit:hover {
     box-shadow: var(--box-shadow-inset);
 }
-.bi-search{
+
+.bi-search {
     font-size: 23px;
+}
+
+
+/* ---------------
+Media Queries 
+------------- */
+/* Mobile Devices */
+@media only screen and (max-width: 281px) {
+    #theme-toggler {
+        height: 2rem;
+        width: 2rem;
+        line-height: 2rem;
+        top: 20px;
+        left: 15rem;
+    }
+}
+
+@media only screen and (min-width:282px) and (max-width:688px) {
+    #theme-toggler {
+        height: 3rem;
+        width: 3rem;
+        line-height: 3rem;
+        top: 20px;
+
+    }
+}
+
+@media only screen and (max-width:688px) {
+
+    #phoneInput {
+        padding: 5px;
+        border-radius: 10px;
+
+    }
+
+    #submit {
+        padding: 5px 10px;
+
+    }
+
+    .bi-search {
+        font-size: 20px;
+    }
+
+    nav a {
+        font-size: 20px;
+    }
+
+    nav li {
+        margin: 5px;
+    }
 }
