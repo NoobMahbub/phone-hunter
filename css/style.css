@@ -149,6 +149,7 @@ nav li:hover {
 }
 .main-info li{
     margin: 15px 0;
+    color: var(--black);
 }
 
 #details ul {
