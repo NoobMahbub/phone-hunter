@@ -15,9 +15,13 @@ const submit = document.getElementById("submit");
 submit.addEventListener("click", () => {
   const phoneInput = document.getElementById('phoneInput');
   const searchText = phoneInput.value;
+
+  if (phoneInput.value == '') {
+    alert("Please type a phone name");
+  }
+  phoneInput.value = '';
   fetch(`https://openapi.programming-hero.com/api/phones?search=${searchText}`).then(response => response.json())
     .then(response => displaySearch(response.data))
-
 });
 
 
@@ -159,6 +163,16 @@ const closeBtn = (e) => {
 const searchResult = document.getElementById('search-result');
 const phoneDetails = document.getElementById('details');
 displaySearch = phone => {
+  if (phone[0] == undefined) {
+    const nullResult = document.getElementById("null-result");
+    nullResult.classList.add("d-flex",
+      "align-items-center",
+      "justify-content-center",
+      "text-danger",
+      "fw-bold");
+    nullResult.innerHTML = `<p>Phone not found. Please search for another phone.`;
+
+  }
 
   phone.forEach(phone => {
     const div = document.createElement('div');
