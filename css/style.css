@@ -151,6 +151,9 @@ nav li:hover {
     margin: 15px 0;
     color: var(--black);
 }
+.main-info h2,h4{
+    color: var(--white);
+}
 
 #details ul {
     list-style: none;
