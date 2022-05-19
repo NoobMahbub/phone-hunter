@@ -48,6 +48,19 @@ body {
     background: var(--bg-color);
 }
 
+/* Card Style */
+
+.card {
+    background-color: var(--bg-color);
+    box-shadow: var(--box-shadow);
+    color: var(--white);
+    border: 0;
+}
+
+img {
+    border-radius: 17px;
+}
+
 /* Social icons style */
 
 nav li {
@@ -61,9 +74,10 @@ nav li {
 
 nav a {
     font-size: 30px;
-    
+
 }
-nav a i{
+
+nav a i {
     color: var(--black);
 }
 
@@ -83,7 +97,7 @@ nav li:hover {
 
 
 
- .bi-whatsapp {
+.bi-whatsapp {
     color: #63d843;
 
 }
@@ -96,10 +110,10 @@ nav li:hover {
 /* phoneInput search bar style */
 #phoneInput {
     background-color: var(--bg-color);
+    color: var(--white);
     border: 0;
     box-shadow: var(--box-shadow-inset);
     padding: 15px 50px;
-
     border-radius: 10px;
 
 }
@@ -120,6 +134,42 @@ nav li:hover {
     font-size: 23px;
 }
 
+/* Phone Details */
+
+.main-info {
+    box-shadow: var(--box-shadow);
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.main-info span::after {
+    content: "\A";
+    white-space: pre;
+
+}
+.main-info li{
+    margin: 15px 0;
+}
+
+#details ul {
+    list-style: none;
+}
+
+#details i {
+    color: red;
+}
+/* Close button */
+.main-info{
+    position: relative;
+}
+.main-info i{
+    font-size: 30px;
+}
+#close-btn{
+    position: absolute;
+    top: 0;
+    left: 95%;
+}
 
 /* ---------------
 Media Queries 
@@ -133,8 +183,14 @@ Media Queries
         top: 20px;
         left: 15rem;
     }
+    #close-btn{
+        position: absolute;
+        top: 0;
+        left: 80%;
+        font-size: 20px;
+    }
 }
-
+/* for normal mobile devices */
 @media only screen and (min-width:282px) and (max-width:688px) {
     #theme-toggler {
         height: 3rem;
@@ -142,6 +198,12 @@ Media Queries
         line-height: 3rem;
         top: 20px;
 
+    }
+    #close-btn{
+        position: absolute;
+        top: 0;
+        left: 83%;
+        
     }
 }
 
@@ -170,3 +232,13 @@ Media Queries
         margin: 5px;
     }
 }
+/*working only in ipad portrait device*/
+@media only screen and (max-width: 992px) and (min-width: 541px)  {
+    /* iPads, Tablets */
+    #close-btn{
+        position: absolute;
+        top: 0;
+        left: 92%;
+    }
+     
+  }
