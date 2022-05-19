@@ -19,10 +19,14 @@ submit.addEventListener("click", () => {
   if (phoneInput.value == '') {
     alert("Please type a phone name");
   }
-  phoneInput.value = '';
-  fetch(`https://openapi.programming-hero.com/api/phones?search=${searchText}`).then(response => response.json())
-    .then(response => displaySearch(response.data))
+
+  else {
+    phoneInput.value = '';
+    fetch(`https://openapi.programming-hero.com/api/phones?search=${searchText}`).then(response => response.json())
+      .then(response => displaySearch(response.data))
+  }
 });
+
 
 
 
@@ -163,6 +167,8 @@ const closeBtn = (e) => {
 const searchResult = document.getElementById('search-result');
 const phoneDetails = document.getElementById('details');
 displaySearch = phone => {
+
+  searchResult.innerHTML = '';
   if (phone[0] == undefined) {
     const nullResult = document.getElementById("null-result");
     nullResult.classList.add("d-flex",
@@ -173,11 +179,14 @@ displaySearch = phone => {
     nullResult.innerHTML = `<p>Phone not found. Please search for another phone.`;
 
   }
+  else {
+    document.getElementById('null-result').innerHTML = '';
 
-  phone.forEach(phone => {
-    const div = document.createElement('div');
-    div.classList.add('col', 'col-md-4');
-    div.innerHTML = `
+
+    phone.forEach(phone => {
+      const div = document.createElement('div');
+      div.classList.add('col', 'col-md-4');
+      div.innerHTML = `
     <div onclick="" class="card p-3 rounded-3">
     <img src="${phone.image}"class="img-fluid card-img-top" alt="...">
     <div class="card-body">
@@ -188,8 +197,9 @@ displaySearch = phone => {
     </div>
     `;
 
-    searchResult.appendChild(div);
-  });
+      searchResult.appendChild(div);
+    });
+  }
 
 }
 
