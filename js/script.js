@@ -187,9 +187,11 @@ displaySearch = phone => {
       const div = document.createElement('div');
       div.classList.add('col', 'col-md-4');
       div.innerHTML = `
-    <div onclick="" class="card p-3 rounded-3">
-    <img src="${phone.image}"class="img-fluid card-img-top" alt="...">
-    <div class="card-body">
+    <div class="card p-3 rounded-3 d-flex justify-content-center">
+    <div class="d-flex justify-content-center align-items-center">
+    <img src="${phone.image}" class="card-img-top w-75" alt="...">
+    </div>
+    <div class="card-body d-flex flex-column justify-content-center">
     <h5 class="card-title">${phone.phone_name}</h5>
     <p class="card-text">Brand: ${phone.brand}</p>
     <a onClick="showDetails('${phone.slug}')" class="btn btn-primary">Show Details</a>
